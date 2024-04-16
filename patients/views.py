@@ -5,12 +5,12 @@ from .forms import SignupForm, LoginForm
 # Create your views here.
 #Home Page
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'home.html')
 
 #Sign up page
 def user_signup(request):
-    if request.method == 'POST'
-    form = SignupForm(request.POST)
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
     if form.is_valid():
         form.save()
         return redirect('login')
